@@ -14,7 +14,7 @@ function ResultItem(props: any) {
         <h3 className="text-lg text-gray-600">{props.movie.Year}</h3>
       </div>
       <div className="absolute right-4 bottom-4">
-        <NominateButton movie={props.movie.imdbID} />
+        <NominateButton movie={props.movie} />
       </div>
     </div>
   );
