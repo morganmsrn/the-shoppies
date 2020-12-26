@@ -14,7 +14,7 @@ function NominationTab() {
   }
 
   return (
-    <div className="fixed w-screen bottom-0 bg-gray-900 p-2">
+    <div className="fixed w-full bottom-0 bg-gray-900 p-2">
       <div className="flex flex-row-reverse text-gray-100 text-xl font-medium">
         <button
           onClick={onClick}
