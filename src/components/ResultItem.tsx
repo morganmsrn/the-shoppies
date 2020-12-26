@@ -2,7 +2,7 @@ import NominateButton from "./NominateButton";
 
 function ResultItem(props: any) {
   return (
-    <div className="flex relative my-4 h-40 bg-gray-100 rounded shadow-lg">
+    <div className="flex w-96 relative m-3 h-40 bg-gray-100 rounded shadow-lg">
       <img
         src={props.movie.Poster}
         alt="poster"

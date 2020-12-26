@@ -10,9 +10,11 @@ function ResultList() {
 
   if (isMovieList(movieSearch)) {
     return (
-      <div className="mt-8 mx-8">
+      <div className="flex flex-wrap flex-1 mt-8 mx-8 justify-center">
         {movieSearch.map((movie) => (
-          <ResultItem key={movie.imdbID} movie={movie} />
+          <div>
+            <ResultItem key={movie.imdbID} movie={movie} />
+          </div>
         ))}
       </div>
     );

@@ -17,7 +17,7 @@ function NominationTab() {
   }
 
   return (
-    <div className="fixed w-full bottom-0 bg-gray-900 p-2">
+    <div className="fixed w-full md:w-96 md:right-10 bottom-0 bg-gray-900 p-3 md:rounded-t-lg">
       <div className="text-gray-100 text-xl font-medium mx-4">
         <button onClick={onClick} className="w-full flex items-center">
           <span className="text-gray-500">{numberOfNominations} / 5</span>

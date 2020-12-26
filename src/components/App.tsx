@@ -9,10 +9,10 @@ function App() {
   return (
     <div className="pb-14">
       <RecoilRoot>
+        <AlertBanner />
         <Header />
         <SearchBar />
         <ResultList />
-        <AlertBanner />
         <NominationTab />
       </RecoilRoot>
     </div>
