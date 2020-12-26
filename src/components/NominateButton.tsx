@@ -13,15 +13,17 @@ function NominateButton(props: any) {
       list.push(props.movie);
       setNominationList(list);
     } else {
-      setNominationList(nominationList.filter((movie) => movie !== props.movie));
+      setNominationList(
+        nominationList.filter((movie) => movie.imdbID !== props.movie.imdbID)
+      );
     }
   }
 
-  if (nominationList.includes(props.movie)) {
+  if (nominationList.some((movie) => movie.imdbID === props.movie.imdbID)) {
     return (
       <button
         onClick={() => nominate(false)}
-        className="flex items-center py-1 px-3 rounded bg-green-500 text-gray-100 font-medium text-xl shadow-lg"
+        className="flex items-center py-1 px-3 rounded bg-blue-500 text-gray-100 font-medium text-xl shadow-lg"
       >
         <StarFill className="mr-2" />
         SELECTED

@@ -2,7 +2,6 @@ enum SearchStatus {
   NoSearch,
   Loading,
   Error,
-  TooManyResults,
   NoResults,
 }
 

@@ -20,10 +20,6 @@ function SearchMovies(
     .then(function (response) {
       if (response.data.Response === "False") {
         switch (response.data.Error) {
-          case "Too many results": {
-            setSearchState(SearchStatus.TooManyResults);
-            break;
-          }
           case "Movie not found!": {
             setSearchState(SearchStatus.NoResults);
             break;
