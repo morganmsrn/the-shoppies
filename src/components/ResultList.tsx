@@ -12,8 +12,8 @@ function ResultList() {
     return (
       <div className="flex flex-wrap flex-1 mt-8 mx-8 justify-center">
         {movieSearch.map((movie) => (
-          <div>
-            <ResultItem key={movie.imdbID} movie={movie} />
+          <div key={movie.imdbID}>
+            <ResultItem movie={movie} />
           </div>
         ))}
       </div>
