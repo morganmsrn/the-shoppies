@@ -1,12 +1,12 @@
 import axios from "axios";
 import { SetterOrUpdater } from "recoil";
-import Movie from "../models/Movie";
-import SearchStatus from "../models/SearchStatus";
+import { Movie } from "../models/Movie";
+import { SearchStatus } from "../models/SearchStatus";
 
-function SearchMovies(
+export const SearchMovies = (
   input: String,
   setSearchState: SetterOrUpdater<SearchStatus | Movie[]>
-) {
+) => {
   setSearchState(SearchStatus.Loading);
 
   axios
@@ -37,6 +37,4 @@ function SearchMovies(
       setSearchState(SearchStatus.Error);
       console.log(error);
     });
-}
-
-export default SearchMovies;
+};

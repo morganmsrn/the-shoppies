@@ -1,9 +1,9 @@
 import { atom, DefaultValue } from "recoil";
-import Movie from "../models/Movie";
+import { Movie } from "../models/Movie";
 
 let key = "NominationList";
 
-const nominationListState = atom<Movie[]>({
+export const nominationListState = atom<Movie[]>({
   key: key,
   default: [],
   effects_UNSTABLE: [
@@ -24,5 +24,3 @@ const nominationListState = atom<Movie[]>({
     },
   ],
 });
-
-export default nominationListState;

@@ -1,8 +1,6 @@
-interface Movie {
-  Title: String;
+export type Movie = {
+  Title: string;
   Year: number;
-  Poster: String;
+  Poster: string;
   imdbID: number;
-}
-
-export default Movie;
+};
