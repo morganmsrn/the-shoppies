@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { BookmarkX } from "react-bootstrap-icons";
 import { useRecoilState } from "recoil";
 import { nominationListState } from "../atoms/nominationListState";
@@ -6,7 +6,7 @@ import { Movie } from "../models/Movie";
 
 /** This button needs to be clicked twice in order to be sure
  * the user really wants to delete the item
- * If the user puts their mice elsewhere on the page, the delete action is cancelled
+ * If the user puts their mouse elsewhere on the page, the delete action is cancelled (useEffect)
  */
 
 export const RemoveNominationBtn: React.FC<{ movie: Movie }> = ({ movie }) => {
@@ -19,7 +19,13 @@ export const RemoveNominationBtn: React.FC<{ movie: Movie }> = ({ movie }) => {
     setNominationList(nominationList.filter((m) => m !== movie));
   };
 
-  document.body.addEventListener("mouseleave", () => setisClicked(false), true);
+  useEffect(() => {
+    document.body.addEventListener(
+      "mouseleave",
+      () => setisClicked(false),
+      true
+    );
+  });
 
   if (isClicked) {
     return (
