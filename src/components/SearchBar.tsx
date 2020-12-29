@@ -10,6 +10,7 @@ export const SearchBar = () => {
     <div className="mx-8">
       <div className="flex items-center max-w-lg px-6 py-3 mx-auto -mt-10 shadow-2xl bg-gray-100 rounded">
         <input
+          aria-label="search"
           id="search"
           onChange={(e) => SearchMovies(e.target.value, setSearchState)}
           placeholder="Movies"
