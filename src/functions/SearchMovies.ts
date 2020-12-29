@@ -12,7 +12,7 @@ export const SearchMovies = (
   axios
     .get("https://www.omdbapi.com/", {
       params: {
-        apikey: "191b7b3d",
+        apikey: process.env.REACT_APP_API_KEY,
         type: "movie",
         s: input,
       },

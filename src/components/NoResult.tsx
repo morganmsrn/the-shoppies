@@ -1,6 +1,8 @@
 import { ThreeDots } from "react-bootstrap-icons";
 import { SearchStatus } from "../models/SearchStatus";
 
+/** This component displays a message depending on the status of the search query */
+
 export const NoResult: React.FC<{ search: SearchStatus }> = ({ search }) => {
   switch (search) {
     case SearchStatus.Error: {
